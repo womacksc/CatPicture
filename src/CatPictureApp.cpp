@@ -1,3 +1,14 @@
+/**
+ *@file CatPicture
+ *An app to display a color changing background.
+ *
+ *@author Shiloh Womack
+ *@date Aug 25, 2012
+ *
+ *@note You are free to use, share, and remix this,
+ *privately or commercially, as long as you give attribution.
+*/
+
 #include "cinder/app/AppBasic.h"
 #include "cinder/gl/gl.h"
 
@@ -34,6 +45,7 @@ void CatPictureApp::update()
 	green = red - 0.02f;
 	blue = blue + 0.005f;
 
+	// Statements to ensure variables remain within parameters
 	if (red > 1.0f){
 		red = 0.0f;
 	}
@@ -49,7 +61,6 @@ void CatPictureApp::update()
 
 void CatPictureApp::draw()
 {
-	// clear out the window with black
 	gl::clear( Color( red, green, blue ) ); 
 }
 
